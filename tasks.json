@@ -5,6 +5,10 @@
   },
   {
     "text": "dome item",
+    "status": "done"
+  },
+  {
+    "text": "this is a test",
     "status": "todo"
   }
 ]

@@ -196,6 +196,10 @@ func (nl *NoLearn) handleInput(char rune, key keyboard.Key) (shouldQuit bool) {
 }
 
 func (nl *NoLearn) promptForNewTask() {
+	// Show cursor for text input
+	showCursor()
+	defer hideCursor() // Hide cursor again when done
+
 	// Temporarily close keyboard for line input
 	keyboard.Close()
 	defer func() {
@@ -217,6 +221,16 @@ func clearScreen() {
 	cmd.Run()
 }
 
+// Hide cursor using ANSI escape code
+func hideCursor() {
+	fmt.Print("\033[?25l")
+}
+
+// Show cursor using ANSI escape code
+func showCursor() {
+	fmt.Print("\033[?25h")
+}
+
 func main() {
 	filename := "tasks.json"
 	if len(os.Args) > 1 {
@@ -234,6 +248,11 @@ func main() {
 		return
 	}
 	defer keyboard.Close()
+
+	// Hide cursor when application starts
+	hideCursor()
+	// Ensure cursor is shown when application exits
+	defer showCursor()
 
 	for {
 		nl.display()
