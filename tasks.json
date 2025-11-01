@@ -1,10 +1,10 @@
 [
   {
-    "text": "test",
-    "status": "done"
+    "text": "learn go",
+    "status": "todo"
   },
   {
-    "text": "go learn",
-    "status": "seen"
+    "text": "dome item",
+    "status": "todo"
   }
 ]

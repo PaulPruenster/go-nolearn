@@ -135,7 +135,7 @@ func (nl *NoLearn) display() {
 	clearScreen()
 
 	fmt.Println("Nolearn. Press 'q' or ESC to quit.")
-	fmt.Println("Controls: w/↑=up, s/↓=down, a=cycle status forward, d=cycle status backward, n=new task, x=delete")
+	fmt.Println("Controls: e/↑=up, d/↓=down, f=cycle status forward, s=cycle status backward, n=new task, x=delete")
 
 	if len(nl.tasks) == 0 {
 		fmt.Println("No tasks. Press 'n' to add a new task.")
