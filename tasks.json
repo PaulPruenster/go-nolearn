@@ -1,7 +1,7 @@
 [
   {
     "text": "learn go",
-    "status": "todo"
+    "status": "seen"
   },
   {
     "text": "dome item",
@@ -9,6 +9,10 @@
   },
   {
     "text": "this is a test",
+    "status": "todo"
+  },
+  {
+    "text": "adding task\u001bq",
     "status": "todo"
   }
 ]

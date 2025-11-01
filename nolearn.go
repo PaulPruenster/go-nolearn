@@ -196,9 +196,8 @@ func (nl *NoLearn) handleInput(char rune, key keyboard.Key) (shouldQuit bool) {
 }
 
 func (nl *NoLearn) promptForNewTask() {
-	// Show cursor for text input
 	showCursor()
-	defer hideCursor() // Hide cursor again when done
+	defer hideCursor()
 
 	// Temporarily close keyboard for line input
 	keyboard.Close()
@@ -249,9 +248,7 @@ func main() {
 	}
 	defer keyboard.Close()
 
-	// Hide cursor when application starts
 	hideCursor()
-	// Ensure cursor is shown when application exits
 	defer showCursor()
 
 	for {
